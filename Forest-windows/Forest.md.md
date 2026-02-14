@@ -1,4 +1,4 @@
-![[Pasted image 20251231102434.png]]
+![](<attachments/Pasted image 20251231102434.png>)
 # Forest (Windows)
 
 **Tags:** #Windows #Easy #ActiveDirectory #ASREPRoasting #BloodHound #AccountOperators #DCSync

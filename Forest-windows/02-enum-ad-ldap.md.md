@@ -9,7 +9,7 @@ Based on your Nmap scan, we know the domain is `htb.local`. Let's build the comm
 ldapsearch -x -H ldap://<IP> -b "<BASE_DN>"
 ```
 
-![[Pasted image 20251231110604.png]]
+![](<attachments/Pasted image 20251231110604.png>)
 
 ### What to look for in the output?
 
@@ -22,4 +22,4 @@ If you want to filter out the noise and see only the users, you can modify the c
 ldapsearch -x -H ldap://10.129.29.201 -b "dc=htb,dc=local" "(objectClass=user)" sAMAccountName
 ```
 
-![[Pasted image 20251231111245.png]] ![[Pasted image 20251231111336.png]]
+![](<attachments/Pasted image 20251231111245.png>) ![](<attachments/Pasted image 20251231111336.png>)

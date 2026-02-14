@@ -2,7 +2,7 @@
 
 #rpcenum
 
-![[Pasted image 20260101181315.png]] ![[Pasted image 20260101181332.png]]
+![](<attachments/Pasted image 20260101181315.png>) ![](<attachments/Pasted image 20260101181332.png>)
 
 Let's dump all users into a file and clean it up:
 
@@ -12,4 +12,4 @@ Let's dump all users into a file and clean it up:
 cat users | awk -F'|' '{print $2}' | grep -v "^[[:space:]]*$" | grep -v "Users" > temp.txt
 ```
 
-![[Pasted image 20260101181606.png]]
+![](<attachments/Pasted image 20260101181606.png>)
