@@ -1,0 +1,6 @@
+![](<attachments/Pasted image 20260109225808.png>) 
+A POST request was identified to the endpoint `/portfolio/default....` where the parameter `file=cv.pdf` handles file downloads, showing a clear **LFI (Local File Inclusion)** vulnerability. This vector is critical to try to exfiltrate `web.config`, which would allow us to obtain the server’s IIS validation and decryption keys (`machineKey`); these keys are required to forge a malicious **ViewState** using **ysoserial.net** and achieve remote code execution (RCE) via deserialization.
+
+![](<attachments/Pasted image 20260109225851.png>)
+
+A **Local File Inclusion (LFI)** vulnerability was identified in the endpoint `/portfolio/default.aspx` by manipulating the `file` parameter. By injecting a directory traversal path (`..\web.config`), it was possible to exfiltrate the IIS configuration file. Analysis of this file revealed critical cryptographic keys (`machineKey`, `validationKey`, and `decryptionKey`). Obtaining these secrets is essential, since they allow digitally signing serialized objects; this enables the use of tools like **ysoserial.net** to forge a malicious **ViewState** and achieve Remote Code Execution (RCE) through an insecure deserialization attack.
